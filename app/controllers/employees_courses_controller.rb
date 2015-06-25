@@ -69,6 +69,6 @@ class EmployeeCoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_course_params
-      params[:employee_course]
+      params.require(:employee_course).permit(:course_id, :employee_id)
     end
 end
