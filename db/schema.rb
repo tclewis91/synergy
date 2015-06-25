@@ -21,10 +21,13 @@ ActiveRecord::Schema.define(version: 20150625111307) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "title"
-    t.string   "enrollment_cap"
+    t.integer  "enrollment_cap"
+    t.integer  "location_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
+
+  add_index "courses", ["location_id"], name: "index_courses_on_location_id"
 
   create_table "employee_courses", force: :cascade do |t|
     t.integer  "employee_id"
