@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :employee_courses
   resources :employees
   resources :courses
   resources :locations
