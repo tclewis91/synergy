@@ -1,3 +1,4 @@
+require 'faker'
 5.times do
   company =Company.create(name: Faker::Company.name)
     5.times do
